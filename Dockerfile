@@ -6,8 +6,10 @@ WORKDIR /app
 
 # Clone the repository
 RUN apk add --no-cache git && \
-    git clone https://github.com/NightProxy/Light.git . && \
-    npm install
+    git clone https://github.com/LightUnblocker/Light.git . 
+
+# Install dependencies
+RUN npm install
 
 # Expose the default port (adjust if necessary)
 EXPOSE 3000
